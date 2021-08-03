@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+#wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: block;
+    width: 500px;
+    height: 450px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+#container .tabs {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#container .tabs .tab {
+    width: 25%;
+    color: #c23564;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    transition: all ease 0.5s;
+    padding: 3px 0;
+    opacity: 0.7;
+    border-bottom: 4px solid transparent;
+}
+
+#container .tabs .tab:hover {
+    opacity: 1;
+    color: #000;
+    background-color: rgba(194, 53, 100, 0.1);
+    border-bottom: 4px solid rgba(194, 53, 100, 0.3);
+}
+
+#container .tabs h2 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+#container .tabs .line {
+    position: absolute;
+    width: 25%;
+    height: 4px;
+    background-color: #c23564;
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+#container .tab.active {
+    opacity: 1;
+    color: #000;
+}
+
+#container .tab.active .my-icon {
+    color: #c23564;
+}
+
+#container .tab-content {
+    padding: 10px;
+}
+
+#container .tab-pane {
+    transition: all 0.5s ease;
+    display: none;
+}
+
+#container .tab-pane.active {
+    display: block;
+    animation: trans-pane 0.5s ease;
+}
+
+#container .tab-pane p {
+    text-align: justify;
+}
+
+/* @keyframes trans-pane {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} */
